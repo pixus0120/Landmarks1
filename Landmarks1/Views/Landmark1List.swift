@@ -14,9 +14,14 @@ struct Landmark1List: View {
 //            Landmark1Row(landmark: landmarks[1])
 //        }
         
-//Complete the dynamically-generated list by returning a LandmarkRow from the closure.This creates one LandmarkRow for each element in the landmarks array.
-        List(landmarks){ landmark in
-            Landmark1Row(landmark: landmark)
+        //Complete the dynamically-generated list by returning a LandmarkRow from the closure.This creates one LandmarkRow for each element in the landmarks array.
+        NavigationView{
+            List(landmarks){ landmark in
+                NavigationLink(destination: Landmark1Detail()){
+                Landmark1Row(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
         }
     }
 }

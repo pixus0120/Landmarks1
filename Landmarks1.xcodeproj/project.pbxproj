@@ -12,6 +12,7 @@
 		BE0DF712268BBDAA00AA8D42 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DF711268BBDAA00AA8D42 /* ModelData.swift */; };
 		BE0DF717268BBEC300AA8D42 /* Landmark1Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DF716268BBEC300AA8D42 /* Landmark1Row.swift */; };
 		BE0DF719268BC14B00AA8D42 /* Landmark1List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DF718268BC14B00AA8D42 /* Landmark1List.swift */; };
+		BE0DF71B268BC33000AA8D42 /* Landmark1Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DF71A268BC33000AA8D42 /* Landmark1Detail.swift */; };
 		BE6CEC6C268A8C5F00C30C21 /* Landmarks1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6CEC6B268A8C5F00C30C21 /* Landmarks1App.swift */; };
 		BE6CEC6E268A8C5F00C30C21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6CEC6D268A8C5F00C30C21 /* ContentView.swift */; };
 		BE6CEC70268A8C6200C30C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6CEC6F268A8C6200C30C21 /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 		BE0DF711268BBDAA00AA8D42 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		BE0DF716268BBEC300AA8D42 /* Landmark1Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark1Row.swift; sourceTree = "<group>"; };
 		BE0DF718268BC14B00AA8D42 /* Landmark1List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark1List.swift; sourceTree = "<group>"; };
+		BE0DF71A268BC33000AA8D42 /* Landmark1Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark1Detail.swift; sourceTree = "<group>"; };
+		BE0DF71C268BC4DA00AA8D42 /* Landmarks1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Landmarks1.entitlements; sourceTree = "<group>"; };
 		BE6CEC68268A8C5F00C30C21 /* Landmarks1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6CEC6B268A8C5F00C30C21 /* Landmarks1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks1App.swift; sourceTree = "<group>"; };
 		BE6CEC6D268A8C5F00C30C21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 				BE6CEC7B268AC62400C30C21 /* MapView.swift */,
 				BE0DF716268BBEC300AA8D42 /* Landmark1Row.swift */,
 				BE0DF718268BC14B00AA8D42 /* Landmark1List.swift */,
+				BE0DF71A268BC33000AA8D42 /* Landmark1Detail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +99,7 @@
 		BE6CEC6A268A8C5F00C30C21 /* Landmarks1 */ = {
 			isa = PBXGroup;
 			children = (
+				BE0DF71C268BC4DA00AA8D42 /* Landmarks1.entitlements */,
 				BE6CEC6B268A8C5F00C30C21 /* Landmarks1App.swift */,
 				BE0DF713268BBE2500AA8D42 /* Views */,
 				BE0DF714268BBE4300AA8D42 /* Model */,
@@ -183,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0DF71B268BC33000AA8D42 /* Landmark1Detail.swift in Sources */,
 				BE0DF710268BBB2700AA8D42 /* Landmark1.swift in Sources */,
 				BE6CEC6E268A8C5F00C30C21 /* ContentView.swift in Sources */,
 				BE6CEC7C268AC62500C30C21 /* MapView.swift in Sources */,
@@ -318,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Landmarks1/Landmarks1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks1/Preview Content\"";
@@ -337,6 +344,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixus.Landmarks1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Landmarks1/Landmarks1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks1/Preview Content\"";
@@ -367,6 +376,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixus.Landmarks1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
