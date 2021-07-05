@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Landmark1List: View {
     //Because you use state properties to hold information that’s specific to a view and its subviews, you always create state as private.
-    @State private var showFavoritesOnly = true
+    @State private var showFavoritesOnly = false
     var filteredLandmarks: [Landmark1] {
         landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
@@ -24,9 +24,15 @@ struct Landmark1List: View {
         
         //Complete the dynamically-generated list by returning a LandmarkRow from the closure.This creates one LandmarkRow for each element in the landmarks array.
         NavigationView{
-            List(filteredLandmarks){ landmark in
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+            ForEach(filteredLandmarks){ landmark in
                 NavigationLink(destination: Landmark1Detail(landmark: landmark)){
                 Landmark1Row(landmark: landmark)
+                    }
                 }
             }
             .navigationTitle("Landmarks")
