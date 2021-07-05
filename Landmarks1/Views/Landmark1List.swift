@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Landmark1List: View {
     //Because you use state properties to hold information that’s specific to a view and its subviews, you always create state as private.
+    //@EnvironmentObject property declaration to the view, and an environmentObject(_:) modifier to the preview.
+    @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     var filteredLandmarks: [Landmark1] {
         landmarks.filter { landmark in
@@ -43,7 +45,8 @@ struct Landmark1List: View {
 struct Landmark1List_Previews: PreviewProvider {
     static var previews: some View {
        Landmark1List()
-        
+            .environmentObject(ModelData())
+
         
 //        //ForEach operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use:
 //        //    \.self as key path to the identifier.
