@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct Landmark1List: View {
+struct LandmarkList: View {
     //Because you use state properties to hold information that’s specific to a view and its subviews, you always create state as private.
     //@EnvironmentObject property declaration to the view, and an environmentObject(_:) modifier to the preview.
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
-    var filteredLandmarks: [Landmark1] {
-        landmarks.filter { landmark in
+    ////////////////////////////////////////////
+    var filteredLandmarks: [Landmark] {
+        modelData.landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
         }
     }
+    //////////////////////////////////////////////
     
     var body: some View {
 //        List{
@@ -32,8 +34,8 @@ struct Landmark1List: View {
                 }
                 
             ForEach(filteredLandmarks){ landmark in
-                NavigationLink(destination: Landmark1Detail(landmark: landmark)){
-                Landmark1Row(landmark: landmark)
+                NavigationLink(destination: LandmarkDetail(landmark: landmark)){
+                LandmarkRow(landmark: landmark)
                     }
                 }
             }
@@ -44,7 +46,7 @@ struct Landmark1List: View {
 
 struct Landmark1List_Previews: PreviewProvider {
     static var previews: some View {
-       Landmark1List()
+       LandmarkList()
             .environmentObject(ModelData())
 
         

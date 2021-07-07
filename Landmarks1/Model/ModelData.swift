@@ -11,12 +11,12 @@ import Combine
 //SwiftUI subscribes to your observable object, and updates any views that need refreshing when the data changes. with import Combine
 final class ModelData: ObservableObject{
     //An observable object needs to publish any changes to its data, so that its subscribers can pick up the change.
-    @Published var landmarks: [Landmark1] = load("landmarkData.json")
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
 }
 
 
 //Create an array of landmarks that you initialize from landmarkData.json.
-var landmarks: [Landmark1] = load("landmarkData.json")
+var landmarks: [Landmark] = load("landmarkData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

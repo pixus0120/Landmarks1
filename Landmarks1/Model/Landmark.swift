@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark1: Hashable, Codable, Identifiable{
+struct Landmark: Hashable, Codable, Identifiable{
     
     var id: Int
     var name: String
@@ -27,7 +27,7 @@ struct Landmark1: Hashable, Codable, Identifiable{
     
     //Add a coordinates property to the structure using a nested Coordinates type that reflects the storage in the JSON data structure.
     private var coordinates: Coordinates
-    var locationCoordinates: CLLocationCoordinate2D{
+    var locationCoordinate: CLLocationCoordinate2D{
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
